@@ -1,0 +1,37 @@
+{
+  "_comment": "書き込みはoutput/とActive_Skills/のみ。仕組み(core/Skill_Library/憲章類)はAIから変更不可にする。deny優先。書式は公式ドキュメントで最新版を確認のこと。",
+  "permissions": {
+    "allow": [
+      "Read(./**)",
+      "Write(./output/**)",
+      "Edit(./output/**)",
+      "Write(./Active_Skills/**)",
+      "Edit(./Active_Skills/**)",
+      "WebSearch",
+      "WebFetch(domain:*)",
+      "Bash(bash scripts/init.sh:*)",
+      "Bash(git status:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git log:*)",
+      "Bash(git diff:*)"
+    ],
+    "deny": [
+      "Write(./core/**)",
+      "Edit(./core/**)",
+      "Write(./Skill_Library/**)",
+      "Edit(./Skill_Library/**)",
+      "Write(./CLAUDE.md)",
+      "Edit(./CLAUDE.md)",
+      "Write(./AUTOPILOT.md)",
+      "Edit(./AUTOPILOT.md)",
+      "Write(./DESIGN_CHARTER.md)",
+      "Edit(./DESIGN_CHARTER.md)",
+      "Write(./scripts/**)",
+      "Edit(./scripts/**)",
+      "Bash(rm:*)",
+      "Bash(curl:*)",
+      "Bash(wget:*)"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+# プロファイル: 研究者(個人研究・論文出口)
+persona: academic
+initial_prompt_hints:
+  - "出口は査読論文または技術レポート。事業性より新規性と反証可能性を優先する"
+  - "実験資源は手元計算機(GPU可)のみを前提とし、理論・シミュレーションで完結させる"
+constraints:
+  resource:
+    - "物理試作なし(理論フェーズ限定)"
+  legal:
+    - "理論フェーズは特許法上の「実施」に該当しない範囲に留める"
+default_skills:
+  - morphological-analysis
+  - first-principles
+  - triz
+output_templates:
+  design_coordinate: research-plan   # 研究者は設計座標型も研究計画として扱う
+  research_gap: research-plan
+hitl_gate: post-proposal
+thresholds:
+  max_proposals_per_cycle: 3
+  claims_before_synthesis: 5
+  generalization_repeat_count: 2
+  red_team_screening_interval: 5
+  morph_max_combinations: 60  # 形態分析の直積の上限(超えたら軸を分割)
