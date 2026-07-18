@@ -1,0 +1,17 @@
+name: バグ報告・質問
+description: 動かない、手順が分からない、ドキュメントが変、など
+body:
+  - type: textarea
+    id: body
+    attributes:
+      label: 内容
+      description: 分からない用語は GLOSSARY.md も参照してみてください
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: 環境(バグの場合)
+      placeholder: 例: Windows 11 / Codex CLI x.y / プロファイル individual
+    validations:
+      required: false

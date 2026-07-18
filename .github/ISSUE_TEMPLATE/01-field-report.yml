@@ -1,0 +1,54 @@
+name: 事例・フィードバック報告
+description: 使ってみた結果を教えてください。うまくいかなかった報告が特に貴重です
+title: "[事例] "
+body:
+  - type: input
+    id: theme
+    attributes:
+      label: 探索テーマ
+      description: 公開できる範囲・粒度でかまいません
+      placeholder: 例: ベランダ菜園の旅行中水やり
+    validations:
+      required: false
+  - type: dropdown
+    id: agent
+    attributes:
+      label: 使ったエージェント
+      options:
+        - Claude Code
+        - Codex
+        - Cursor
+        - その他(下の本文に記載)
+    validations:
+      required: true
+  - type: dropdown
+    id: profile
+    attributes:
+      label: 使ったプロファイル
+      options:
+        - individual
+        - academic
+        - 自作・改変
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 何が起きたか
+      description: どこまで進んだか(Phase)、Claim数、候補数と結果、詰まった箇所など
+    validations:
+      required: true
+  - type: textarea
+    id: gap
+    attributes:
+      label: 期待と違った点・変だと感じた判定
+      description: red-teamの判定への異議、Skillの出力の質、手順の分かりにくさなど
+    validations:
+      required: false
+  - type: textarea
+    id: log
+    attributes:
+      label: ログ・出力の抜粋(任意)
+      description: output/ から貼る場合は、公開したくない情報が含まれていないか確認してください
+    validations:
+      required: false
