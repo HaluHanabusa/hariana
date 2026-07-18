@@ -1,7 +1,10 @@
 # ユーザーのローカルカスタマイズ領域(git pull時のコンフリクトをゼロにする)
 Active_Skills/*
 !Active_Skills/.gitkeep
-output/
+/output/
 # 研究抽出データと個人作業メモはリポジトリに入れない
 extraction*
 RELEASE_CHECKLIST*.md
+# エージェント別の入口ファイル(scripts/init.sh が生成。正本は AGENTS.md)
+/CLAUDE.md
+/.cursor/

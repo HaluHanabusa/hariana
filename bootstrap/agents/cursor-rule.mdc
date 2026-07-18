@@ -1,0 +1,13 @@
+---
+description: hariana オーケストレーター(常時適用)
+alwaysApply: true
+---
+
+このリポジトリはイノベーション探索システム hariana です。作業を始める前に
+必ず AGENTS.md(実行手順の正本)を読み、それに従ってください。
+DESIGN_CHARTER.md が憲法、core/red-team/SKILL.md は常時適用です。
+
+書き込みしてよいのは output/ と Active_Skills/ のみ。それ以外
+(core/、Skill_Library/、profiles/、templates/、scripts/、ルート直下の文書)は
+読み取り専用です。境界外への書き込みが必要なら output/QUESTIONS.md に書いて
+人間に委ねてください。

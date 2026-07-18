@@ -39,7 +39,7 @@
 ## Queueが空になったら
 Matrix のUNKNOWNマス・候補台帳・各Skillの出力契約から次の調査タスクを
 生成してQueueに追記し、続行する。生成できることが無くなったら
-Phase 5(CLAUDE.md参照)に入る: cycle-NN-summary.md を書き、
+Phase 5(AGENTS.md参照)に入る: cycle-NN-summary.md を書き、
 ピボット選択肢(最大4案)を QUESTIONS.md に登録して終了する。
 **制約の変更を自動で適用してはならない**(人間の承認 = Phase 0の再開)。
 

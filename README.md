@@ -5,7 +5,9 @@
 
 新しい製品や研究テーマの「まだ誰もやっていない場所(Whitespace)」を、
 AIエージェントに探させるためのフォルダ一式です。
-Claude Codeなどのローカルエージェントに読み込ませて使います。
+Claude Code・Codex・Cursor などのローカルAIエージェントに読み込ませて使います
+(実行手順は業界標準の AGENTS.md 形式。ファイルの読み書きとWeb検索が
+できるエージェントなら動きます)。
 分からない言葉が出てきたら GLOSSARY.md を見てください。
 
 ## どう動くのか(5つのフェーズ)
@@ -32,8 +34,8 @@ Claude Codeなどのローカルエージェントに読み込ませて使いま
 ## はじめ方
 SETUP.md を読んでください(所要5分)。要点は3行:
 ```bash
-bash scripts/init.sh individual   # 立場に合うプロファイルで初期化
-claude                            # 起動
+bash scripts/init.sh individual   # 立場に合うプロファイルで初期化(Codexなら第2引数に codex)
+claude                            # 起動(codex や Cursor でも可 — SETUP.md 手順4)
 # 「〇〇というテーマで探索を始めたい。Phase 0からお願いします」と話す
 ```
 夜間も回し続けたい場合は AUTOPILOT.md へ。
@@ -42,7 +44,7 @@ claude                            # 起動
 | 場所 | 中身 | AIから書ける? |
 |---|---|---|
 | DESIGN_CHARTER.md | 設計の憲法(思想・やらないこと・決定事項) | 不可 |
-| CLAUDE.md / AUTOPILOT.md | 実行手順(対話用 / 無人運転用) | 不可 |
+| AGENTS.md / AUTOPILOT.md | 実行手順(正本 / 無人運転用)。CLAUDE.md 等の入口は init が生成 | 不可 |
 | Skill_Library/ | 考え方の型の保管庫 | 不可 |
 | Active_Skills/ | 今回使う型のコピー(自由に注釈してよい) | 可 |
 | core/red-team/ | 攻撃係+過去の失敗DB(graveyard) | 不可 |
@@ -51,8 +53,10 @@ claude                            # 起動
 | output/ | あなたの探索データ(Obsidianで開ける。git管理外) | 可 |
 | tests/ | 答えの分かっている検証問題と結果 | 不可 |
 
-「不可」の場所は `.claude/settings.json` で書き込み禁止にしてあります。
-AIが自分のルールを書き換えられない構造です。
+「不可」の場所は、Claude Code では `.claude/settings.json` で書き込み禁止を
+強制しています(AIが自分のルールを書き換えられない構造)。強制機構の無い
+エージェント(Codex / Cursor 等)では、AGENTS.md 冒頭の「書き込み境界」の
+指示と git 履歴が防壁になります。
 
 ## 実例: 「見つからない」を正直に報告した話
 賃貸ベランダ菜園の「旅行中10日間の水やり」をテーマに通し運転をしたところ、
