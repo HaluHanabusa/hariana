@@ -31,11 +31,26 @@ core/、Skill_Library/、profiles/、templates/、scripts/、tests/、
 ## ワークスペース
 ユーザーデータはすべて output/ 配下(gitignore済み)。Obsidian Vaultとして
 開ける形式(frontmatter + wikilink)で書く:
+- output/assets/      : 視覚的証拠の画像(取得はcapture.sh経由のみ。下記参照)
 - output/claims/      : Claim(1主張1ファイル、出典・falsifiable_by必須)
 - output/layers/      : レイヤー別サーベイ
 - output/synthesis/   : constraint-matrix.md / whitespace-candidates.md 等
 - output/proposals/   : 企画書(テンプレは templates/)
 - output/QUEUE.md / LOG.md / QUESTIONS.md : 自走運用(書式はQueue先頭コメント参照)
+
+## 視覚的証拠(画像)の扱い
+表はMarkdownの表、図解(フロー・関係図)はMermaidコードブロックで書く。
+画像はテキストで代替できない視覚的証拠(特許図面・製品写真・画面の実物など)に限る。
+- 取得は `bash scripts/capture.sh <URL> <出力名> [CSSセレクタ]`(許可済みコマンド)。
+  保存先は output/assets/ 固定で、出典が output/assets/SOURCES.md に自動追記される
+  (shot-scraper未導入の環境では失敗する。その場合は画像なしで進めてよい)
+- 出力名は `<参照元ID>-<内容>`(例: ws01-patent-fig1)
+- 撮影後は必ず画像ファイルを開き、目的の内容が写っているか確認してから引用する
+  (真っ白・Cookie同意画面などの失敗撮影をそのまま証拠にしない)
+- 文書への埋め込みは標準記法 `![何の証拠か+出典URL](assets/xxx.png)`。
+  Obsidian固有の `![[...]]` は使わない(GitHub等で表示されないため)
+- スクリーンショットは他者の著作物の複製である。output/ 内の私的な調査記録に
+  留め、外部へ共有する成果物に転載する場合は権利の確認を人間に委ねる
 
 ## フェーズ
 
@@ -49,6 +64,7 @@ Claimの収集。**推論・記憶に基づく数値の記載を禁止**し、We
 開始せず、QUESTIONS.md に環境の問題として記録する)。
 「検索してもヒットしない」は失敗ではなく記録対象
 (検索式を添えてnegative resultとしてClaim化する)。
+図面など、テキストで表せない根拠は「視覚的証拠(画像)の扱い」に従い保存する。
 
 ### Phase 2: Matrix構築(Skillの適用)
 - generator系Skillで行を生成し、evaluator系Skillで担当列を判定する

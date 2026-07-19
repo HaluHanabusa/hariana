@@ -1,5 +1,11 @@
 # Changelog
 
+## 未リリース
+- 視覚的証拠の自動取得: scripts/capture.sh(shot-scraperベース。CSSセレクタでの
+  要素切り取り・出典台帳 output/assets/SOURCES.md への自動追記)。
+  AGENTS.md「視覚的証拠(画像)の扱い」節と SETUP.md「画像キャプチャ(任意)」を追加、
+  .claude/settings.json に capture.sh の許可を追加
+
 ## v0.1.0 (2026-07-18)
 初回リリース。
 

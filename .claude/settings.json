@@ -10,6 +10,7 @@
       "WebSearch",
       "WebFetch(domain:*)",
       "Bash(bash scripts/init.sh:*)",
+      "Bash(bash scripts/capture.sh:*)",
       "Bash(git status:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",

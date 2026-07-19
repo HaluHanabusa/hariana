@@ -113,6 +113,21 @@ Obsidianの起動画面で「保管庫としてフォルダを開く」→ `outp
   ただしAIが書き込み中のファイルをObsidian側で同時に編集するのは避ける
   (QUESTIONS.md に回答を書くなら、エージェントの待機中が確実)
 
+## 画像キャプチャ(任意)
+調査中に、表(Markdown)やMermaidでは表せない視覚的証拠(特許図面・製品写真
+など)を、AIが自動でスクリーンショット保存できるようにする機能です。
+未導入でも本体の動作には影響しません(その場合AIは画像なしで調査を進めます)。
+
+```bash
+pip install shot-scraper   # uv派なら: uv tool install shot-scraper
+shot-scraper install       # 撮影用ブラウザ(Chromium)の取得(1回だけ)
+```
+
+導入すると、AIは `bash scripts/capture.sh <URL> <出力名> [CSSセレクタ]` で
+`output/assets/` に画像を保存し、出典を `output/assets/SOURCES.md` に自動記録
+します(運用ルールは AGENTS.md「視覚的証拠(画像)の扱い」)。Obsidianでは
+本文の `![説明](assets/xxx.png)` がそのままインライン表示されます。
+
 ## 無人運転したい場合(任意)
 夜間や不在時に回し続けたい場合は AUTOPILOT.md を読み、
 起動後に「AUTOPILOT.mdに従ってoutput/QUEUE.mdの処理を開始してください」と
