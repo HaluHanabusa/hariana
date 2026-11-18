@@ -14,6 +14,7 @@ default_skills:
   - first-principles
   - triz
   - frugal-innovation
+  - jobs-to-be-done   # lean-mvpテンプレ「1. 解決するジョブ」が本Skillの判定を転記する前提のため
 output_templates:
   design_coordinate: lean-mvp      # 週末MVP要件(リーンスタートアップ形式)
   research_gap: research-plan      # 研究ギャップ型は研究計画書で出す
@@ -25,5 +26,5 @@ thresholds:
   max_proposals_per_cycle: 3      # 1サイクルの企画書生成上限(ランク付き)
   claims_before_synthesis: 5      # Matrix更新を起動するClaim蓄積数
   generalization_repeat_count: 2  # パターンを汎用化する最低再発回数(2回ルール)
-  red_team_screening_interval: 5
-  morph_max_combinations: 60  # 形態分析の直積の上限(超えたら軸を分割)  # 行が何本増えるごとに早期スクリーニングを行うか
+  red_team_screening_interval: 5  # 行が何本増えるごとに早期スクリーニングを行うか
+  morph_max_combinations: 60      # 形態分析の直積の上限(超えたら軸を分割)

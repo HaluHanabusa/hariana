@@ -13,6 +13,8 @@
 5. 次のTODOへ
 
 ## 定期処理(ループの合間に自動で行う)
+- フェーズの関所(AGENTS.md「機械検証」) → Matrix統合の前と、企画書化の直前・直後に
+  scripts/verify.py を実行する。終了コードが0以外のまま先へ進まない
 - Claimが thresholds.claims_before_synthesis 件たまるごと → Matrix統合を実行
 - Matrixの行が thresholds.red_team_screening_interval 本増えるごと →
   red-team早期スクリーニング(死屍照合と "Why nobody" のみの簡易版)

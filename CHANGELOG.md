@@ -1,5 +1,19 @@
 # Changelog
 
+## 未リリース
+- 規律の機械検証: scripts/verify.py(標準ライブラリのみ・読み取り専用)。
+  既存の規律(Claimの出典URL・falsifiable_by・negative resultの検索式、
+  SURVIVE候補のred-team記録と残存リスク、red-team未通過候補の企画書化禁止、
+  wikilink切れ)を終了コードで判定する。新しい規律は足していない。
+  AGENTS.md「機械検証(フェーズの関所)」節、templates/claim.md(Claim雛形)、
+  tests/verify-selftest.sh とフィクスチャを追加
+- 既知の課題: `python3 scripts/verify.py --gate graveyard` は初期4件を
+  出典URLなしとして検出する(CONTRIBUTING.md の「出典URL必須」に未対応)
+- profiles/individual.yml のしきい値コメントのずれを修正
+- profiles/individual.yml の default_skills に jobs-to-be-done を追加
+  (lean-mvpテンプレが同Skillの判定の転記を前提にしているのに、既定では
+  顧客制約の列を評価するSkillが1本も有効になっていなかった)
+
 ## v0.1.0 (2026-07-18)
 初回リリース。
 
