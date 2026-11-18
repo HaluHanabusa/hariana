@@ -49,7 +49,8 @@ claude                            # 起動(codex や Cursor でも可 — SETUP.
 | Active_Skills/ | 今回使う型のコピー(自由に注釈してよい) | 可 |
 | core/red-team/ | 攻撃係+過去の失敗DB(graveyard) | 不可 |
 | profiles/ | 立場別の設定(制約・型・企画書形式・しきい値) | 不可 |
-| templates/ | 企画書の雛形(空白の類型で使い分け) | 不可 |
+| templates/ | 企画書の雛形(空白の類型で使い分け)とClaimの雛形 | 不可 |
+| scripts/ | 初期化(init.sh)と規律の機械検証(verify.py) | 不可 |
 | output/ | あなたの探索データ(Obsidianで開ける。git管理外) | 可 |
 | tests/ | 答えの分かっている検証問題と結果 | 不可 |
 

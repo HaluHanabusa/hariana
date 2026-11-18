@@ -27,6 +27,8 @@ claude
       red-teamが5本柱(特に死屍と Why nobody)を実行したか
 - [ ] Phase 4: 企画書が最大3本・テンプレ形式で output/proposals/ に出たか
 - [ ] 権限: core/ や Skill_Library/ への書き込みを試みなかったか
+- [ ] 機械検証: 終了後に `python3 scripts/verify.py` がエラー0で終わるか
+      (警告は内容を読んで妥当性を確認する。上の Phase 1・3・4 の目視確認の裏取りになる)
 
 ## 重要な注意
 このテーマは成熟市場なので、**「Whitespaceゼロ(全候補REJECTED)」で
