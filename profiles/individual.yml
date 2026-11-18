@@ -14,6 +14,7 @@ default_skills:
   - first-principles
   - triz
   - frugal-innovation
+  - jobs-to-be-done   # lean-mvpテンプレ「1. 解決するジョブ」が本Skillの判定を転記する前提のため
 output_templates:
   design_coordinate: lean-mvp      # 週末MVP要件(リーンスタートアップ形式)
   research_gap: research-plan      # 研究ギャップ型は研究計画書で出す

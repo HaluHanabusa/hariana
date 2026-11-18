@@ -10,6 +10,9 @@
 - 既知の課題: `python3 scripts/verify.py --gate graveyard` は初期4件を
   出典URLなしとして検出する(CONTRIBUTING.md の「出典URL必須」に未対応)
 - profiles/individual.yml のしきい値コメントのずれを修正
+- profiles/individual.yml の default_skills に jobs-to-be-done を追加
+  (lean-mvpテンプレが同Skillの判定の転記を前提にしているのに、既定では
+  顧客制約の列を評価するSkillが1本も有効になっていなかった)
 
 ## v0.1.0 (2026-07-18)
 初回リリース。
